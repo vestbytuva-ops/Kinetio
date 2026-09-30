@@ -1,99 +1,15 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinetio</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./asset/image/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./asset/image/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./asset/image/favicon-16x16.png">
-  <link rel="manifest" href="./asset/image/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel ="stylesheet" href="style.css"/>
-</head>
-<body>
-
-<div id="progress"></div>
-
-<header>
-    <div class="logo">✿ Kinetio</div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-      </div>
-</header>
-
-<nav class="nav" id="nav">
-<a href="index.html">Hjem</a>
-<a href="bmi.html">BMI-indeks</a>
-<a href="search.html">HelseSøk</a>
-<a href="lifestyle.html">Livstil og kosthold</a>
-<a href="reaction.html">Reaksjonstid</a>
-<a href="about.html">Om oss</a>
-</nav>
-
-<section class="hero">
-    <h1 class="heading">Kinetio</h1>
-</section>
-
-
-
-<section class="intro">
-  <div class="tekst-innhold">
-    <p>Gjør skolehverdagen mer dynamisk.
-      Er du lei av statiske dokumenter og uoversiktlige oppgaver? Kinetio fjerner tregheten i læringsprosessen. Vi hjelper deg med å holde fremdriften oppe, enten du skal strukturere ukeplanen, samarbeide i grupper eller øve til den neste store prøven.</p>
-  </div>
-
-  <div class="farge-sidebar">
-    <div class="sirkel sirkel-1"></div>
-    <div class="sirkel sirkel-2"></div>
-    <div class="sirkel sirkel-3"></div>
-    <div class="sirkel sirkel-4"></div>
-    <div class="sirkel sirkel-5"></div>
-  </div>
-</section>
-
-<section class="kalkulator">
-  <div class="kalkulator-inner">
-    <div class="section-title">Karakterkalkulator</div>
-    <div class="kalkulator-grid">
-    <div class="kalkulator-left">
-      <div class="kalkulator-card">
-        <div class="kalkulator-header">
-          <h2 class="karakter-kalkulator">Karakterkalkulator</h2>
-          <p class="kalkulator-tekst">Legg til fagene dine, velg standpunkt og eksamen. Snittet oppdateres umiddelbart.</p>
-        </div>
-
-        <div id="subjects"></div>
-
-        <div class="add-row">
-          <input id="new-subject" type="text" placeholder="Fagkode eller navn - trykk Enter for å legge til" />
-          <button id="add-subject">+ Legg til</button>
-        </div>
-      </div>
-    </div>
-
-    <aside class="kalkulator-summary">
-      <div class="summary-card">
-        <div class="summary-score">
-          <div class="score-val"><span id="average">0.00</span></div>
-          <div class="score-sub">av 6,00</div>
-        </div>
-        <ul class="summary-list">
-          <li>Høyeste karakter: <strong id="highest">—</strong></li>
-          <li>Laveste karakter: <strong id="lowest">—</strong></li>
-          <li>Uten eksamen: <strong id="without-exam">0 fag</strong></li>
-          <li>Konkurransepoeng: <strong id="comp-points">0.0</strong></li>
-        </ul>
-        <button class="compare-btn">Sammenlign studier</button>
-      </div>
-    </aside>
-  </div>
-  </div>
-</section>
-
-<script src="script.js"></script>
-</body>
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#574d4a" />
+    <meta name="description" content="Litt mer oversikt. Litt mindre stress. Regn ut karaktersnittet ditt og utforsk hva neste karakter kan bety med Kinetio." />
+    <title>Kinetio · Karakterkalkulator</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
