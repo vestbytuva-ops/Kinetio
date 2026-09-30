@@ -2,6 +2,8 @@
 
 En karakterkalkulator for ungdomsskole og videregående, med norsk grensesnitt og karakterer fra 1 til 6. Den beregner snitt, anslag på karakter- og fagpoeng og søker i publiserte poenggrenser fra Samordna opptak. Den fastsetter ikke standpunktkarakterer eller endelige opptakspoeng.
 
+[Åpne Kinetio](https://kinetio.vestby-tuva.workers.dev/) · [Kildekode på GitHub](https://github.com/vestbytuva-ops/Kinetio)
+
 ## Start
 
 Åpne denne mappen i en terminal med Node.js 24 og npm installert:
@@ -39,7 +41,9 @@ Fag, karakterer og tema lagres automatisk i nettleserens lokale lagring på denn
 
 ## Publisering
 
-Prosjektet bygges til statiske filer og trenger ingen backend eller hemmelige miljøvariabler. For Cloudflare Pages: velg grenen `main`, bruk Node.js 24, byggekommando `npm ci && npm test && npm run build`, og publiser mappen `dist`. Prosjektroten er repositoriets rot. Ved direkte opplasting publiseres kun innholdet i `dist`.
+Nettsiden er publisert som statiske filer på Cloudflare Workers, under `kinetio`. Den trenger ingen backend eller hemmelige miljøvariabler. Kildekoden ligger på `main` i GitHub-repositoriet.
+
+Oppdateringer publiseres foreløpig manuelt: kjør `npm ci`, `npm test` og `npm run build` med Node.js 24. Åpne Kinetio i Cloudflare → **New deployment**, og last opp mappen `dist`. Kun innholdet i `dist` skal publiseres, med `/` som assets directory. GitHub-opplasting alene oppdaterer ikke nettsiden automatisk.
 
 Utviklingskommandoen starter bare en lokal forhåndsvisning. Karakterer lagret på localhost følger ikke automatisk med til en ny nettadresse, siden nettleserlagring er knyttet til hvert nettsted.
 
