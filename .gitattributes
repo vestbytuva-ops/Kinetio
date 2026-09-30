@@ -1,0 +1,4 @@
+* text=auto
+# Preserve the verified source download byte-for-byte on every operating system.
+public/data/samordna-opptak-poenggrenser-raw.csv -text
+*.png binary
