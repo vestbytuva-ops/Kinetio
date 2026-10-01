@@ -165,8 +165,7 @@ export default function App() {
     </nav>
     <header className="brand-panel" id="topp">
       <img className="brand-texture" src="/kinetio-meadow-hero.png" alt="" width="1672" height="941" fetchPriority="high" />
-      <div className="hero-introduction"><p className="eyebrow">LITT MER OVERSIKT. LITT MER RO.</p><h2>Det starter med<br />mulighetene dine.</h2><p>Finn karaktersnittet ditt.<br />Utforsk veien videre.</p><a className="hero-start" href="#kalkulator">Finn mitt snitt <ArrowUpRight size={19} aria-hidden="true" /></a></div>
-      <div className="brand-baseline"><h1>Kinetio</h1><p>Skolehverdagen,<br /><em>litt lettere.</em></p><a href="#kalkulator" className="hero-link" aria-label="Gå til karakterkalkulatoren"><ArrowDown size={29} aria-hidden="true" /></a></div>
+      <div className="brand-baseline"><h1>Kinetio</h1><a href="#kalkulator" className="hero-link" aria-label="Gå til karakterkalkulatoren"><ArrowDown size={29} aria-hidden="true" /></a></div>
     </header>
 
     <main>
