@@ -2,7 +2,7 @@
 
 En karakterkalkulator for ungdomsskole og videregående, med norsk grensesnitt og karakterer fra 1 til 6. Den beregner snitt, anslag på karakter- og fagpoeng og søker i publiserte poenggrenser fra Samordna opptak. Den fastsetter ikke standpunktkarakterer eller endelige opptakspoeng.
 
-[Åpne Kinetio](https://kinetio.vestby-tuva.workers.dev/) · [Kildekode på GitHub](https://github.com/vestbytuva-ops/Kinetio)
+[Åpne Kinetio](https://kinetio.netlify.app/) · [Kildekode på GitHub](https://github.com/vestbytuva-ops/Kinetio)
 
 ## Start
 
@@ -41,9 +41,11 @@ Fag, karakterer og tema lagres automatisk i nettleserens lokale lagring på denn
 
 ## Publisering
 
-Nettsiden er publisert som statiske filer på Cloudflare Workers, under `kinetio`. Den trenger ingen backend eller hemmelige miljøvariabler. Kildekoden ligger på `main` i GitHub-repositoriet.
+Nettsiden er publisert som statiske filer på Netlify, på `https://kinetio.netlify.app/`. Den trenger ingen backend eller hemmelige miljøvariabler. Kildekoden ligger på `main` i GitHub-repositoriet.
 
-Oppdateringer publiseres foreløpig manuelt: kjør `npm ci`, `npm test` og `npm run build` med Node.js 24. Åpne Kinetio i Cloudflare → **New deployment**, og last opp mappen `dist`. Kun innholdet i `dist` skal publiseres, med `/` som assets directory. GitHub-opplasting alene oppdaterer ikke nettsiden automatisk.
+For manuell publisering: kjør `npm ci`, `npm test` og `npm run build` med Node.js 24, og last opp mappen `dist` som en ny produksjonspublisering i Kinetio-prosjektet på Netlify. Hvis Netlify er koblet til GitHub, bruk `main`, byggekommando `npm run build` og publiseringsmappe `dist`.
+
+Google Search Console bruker `public/google852c938839ed4938.html`. Den kopieres til roten av `dist` og skal være tilgjengelig på `https://kinetio.netlify.app/google852c938839ed4938.html`. Behold filen etter bekreftelsen, slik at eierskapet fortsatt kan kontrolleres.
 
 Utviklingskommandoen starter bare en lokal forhåndsvisning. Karakterer lagret på localhost følger ikke automatisk med til en ny nettadresse, siden nettleserlagring er knyttet til hvert nettsted.
 
